@@ -1,22 +1,29 @@
-import {useState,useEffect} from "react"
+import {useState} from "react"
 import { Spinner } from "react-bootstrap"
 import QueryList from "./QueryList"
+import {fetchedDataSuperBigObject} from "../types/interfaces"
+
 
 const endpoint = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+
+// interface ObjWithName { 
+//     name: string 
+// }
 
 const SearchBar = function () {
     const [query,setQuery] = useState("")
     const [Loading,setLoading] = useState(false)
-    const [data,setData] = useState([])
-
+    const [data,setData] = useState<fetchedDataSuperBigObject[]>([])
+    // const [data,setData] = useState<ObjWithName  | null>(null)
+    // the commented lines are to actually show if we use 
     const handleEnter = async function () {
         try {
             setLoading(true)
         let res = await fetch(endpoint+query)
         if (res.ok) {
-            let data1 = await res.json()
+            let result = await res.json()
             setLoading(false)
-            setData(data1.data)
+            setData(result.data)
             console.log(data)
         }
          else  {
@@ -32,6 +39,7 @@ const SearchBar = function () {
 
     return (
         <>
+        <h1>Turn it On!</h1>
         <div style={{ display: "flex", alignItems: "flex-end" }} className="mt-3">
         <input
           className="form-control mt-3 "
