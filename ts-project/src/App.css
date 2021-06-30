@@ -1,3 +1,7 @@
+body {
+  background-color: #282c34 !important;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +18,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +38,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-weight: 800 !important;
+  filter: drop-shadow(1px 1px 10px white);
+  color: white !important;
+}
+h2 {
+  font-weight: 800 !important;
+  filter: drop-shadow(0px 0px 1px blue);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.flexC {
+  display: flex;
+  flex-direction: column;
+}
+
+#heading {
+}
+.removeComps {
+  color: rgb(97, 96, 99);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s linear;
+  font-family: "Courier New", Courier, monospace;
+}
+.removeComps:hover {
+  transform: rotate(15deg);
+  /* transform: scale(1.2); */
+}
+
+.functionalP {
+  font-weight: 900;
+  color: rgb(13, 110, 253);
+  font-style: italic;
+  cursor: pointer;
+  transition: 0.2s linear;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.functionalP:hover {
+  transform: scale(1.2);
+}
+
+.unselectedHeart {
+  color: grey;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+.unselectedHeart:hover {
+  transform: scale(1.5);
+  color: rgb(220, 53, 69);
+}
+.selectedHeart {
+  color: rgb(220, 53, 69);
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+.selectedHeart:hover {
+  transform: scale(1.5);
+  color: grey;
+}
+
+.addedComps {
+  color: rgb(13, 202, 240);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  /* border-bottom: 1px solid rgb(43, 44, 44); */
+  transition: 0.2s linear;
+}
+.addedComps:hover {
+  transform: rotate(5deg);
 }
