@@ -1,4 +1,4 @@
-import { Route, RouteComponentProps } from 'react-router-dom'
+import { RouteComponentProps } from 'react-router-dom'
 import { anotherSuperBigObject } from '../types/interfaces'
 import {useState,useEffect} from "react"
 import { Spinner ,Container,Row,Col,Table} from "react-bootstrap"
@@ -94,7 +94,7 @@ const correctedDuration = (duration:number) => {
                             </tr>
                             <tr>
                             <td>Contributors</td>
-                            <td>{data?.contributors.map(contributor=>(<span key={contributor.id}>{contributor.name}</span>))}</td>  
+                            <td>{data?.contributors.map(contributor=>(<span key={contributor.id}>{contributor.name+"  "}</span>))}</td>  
                             </tr>
                         </tbody>
                     </Table>

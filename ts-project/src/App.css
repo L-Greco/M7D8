@@ -116,3 +116,11 @@ a {
 .addedComps:hover {
   transform: rotate(5deg);
 }
+
+.songImg {
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.songImg:hover {
+  transform: rotate(10deg);
+}
